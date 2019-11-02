@@ -246,16 +246,6 @@ TreeNode* TreeGenerateWithPostpruning(vector<vector<string>>cars,vector<vector<s
 
     return Node;
 }
-
-/*查询
-1、当前是叶子结点，判断是否正确->返回结果
-2、判断当前结点对应哪种属性(不是具体的属性)
-    比如：当前结点的属性为色泽，但是其有三个值(0->"青绿",1->"乌黑",2->"浅白")[对应三个子节点]
-    判断当前查询的当前属性具体为那个
-    比如：当前查询项的色泽属性值为青绿，则递归查询当前结点的第1个(0号)子节点
-    也即每个结点只需要保留对应的属性，属性下对应的值可以对应到子树的编号
-    当然，叶子节点属性无所谓
-*/
 int TreeCaculateNodeCnt(TreeNode *Model){
     //叶子节点
     if(Model==nullptr){
@@ -273,6 +263,15 @@ int TreeCaculateNodeCnt(TreeNode *Model){
     return NodeCnt;
 }
 
+/*查询
+1、当前是叶子结点，判断是否正确->返回结果
+2、判断当前结点对应哪种属性(不是具体的属性)
+    比如：当前结点的属性为色泽，但是其有三个值(0->"青绿",1->"乌黑",2->"浅白")[对应三个子节点]
+    判断当前查询的当前属性具体为那个
+    比如：当前查询项的色泽属性值为青绿，则递归查询当前结点的第1个(0号)子节点
+    也即每个结点只需要保留对应的属性，属性下对应的值可以对应到子树的编号
+    当然，叶子节点属性无所谓
+*/
 bool TreeQuery(TreeNode *Model,vector<string>car){
     //叶子节点
     if(Model==nullptr){
