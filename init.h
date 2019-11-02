@@ -20,6 +20,7 @@ vector<string>features[MaxFeature]{
     {"small","med","big"},
     {"low","med","high"}
 };
+
 //#define MaxLabel 2
 //#define MaxFeature 6
 //#define MaxSubFeature 10
@@ -34,6 +35,7 @@ vector<string>features[MaxFeature]{
 //    {"°¼ÏÝ","ÉÔ°¼","Æ½Ì¹"},
 //    {"Ó²»¬","ÈíÕ³"}
 //};
+
 /*
     0¡¢buying:   v-high, high, med, low->0¡¢1¡¢2¡¢3
     1¡¢maint:    v-high, high, med, low->0¡¢1¡¢2¡¢3
