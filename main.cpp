@@ -70,7 +70,6 @@ int main(){
     const char *fileName="car.txt";
 
     Init();
-
     ReadData(fileName);
 
     //…Ë÷√—µ¡∑ºØ±»¿˝
