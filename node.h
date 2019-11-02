@@ -9,5 +9,4 @@ struct TreeNode{
     TreeNode(){isLeaf=false;}
 };
 
-
 #endif // NODE_H_INCLUDED
