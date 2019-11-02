@@ -2,18 +2,21 @@
 #define MODEL_H_INCLUDED
 
 TreeNode* TreeGenerateWithoutPruning(vector<vector<string>>cars,vector<string>feature){
+    /*没有训练集：正常输入下不可能出现该情况*/
     if(cars.size()==0){
-        /*没有训练集：正常输入下不可能出现该情况*/
         return nullptr;
     }
     TreeNode *Node=new TreeNode();
     vector<pis> info=CheckInformationOfCars(cars);
-    if(info.size()==1){                 //全部属于同一类标签
+    //全部属于同一类标签
+    if(info.size()==1){
         Node->isLeaf=true;
         Node->label=info[0].second;
         return Node;
     }
-    sort(info.begin(),info.end());      //排序，第一个是出现次数最多的标签
+    //排序，第一个是出现次数最多的标签
+    sort(info.begin(),info.end());
+
     if(feature.size()==0||FeatureEqual(cars,feature)){
         Node->isLeaf=true;
         Node->label=info[0].second;
