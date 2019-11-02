@@ -85,5 +85,4 @@ pair<int,double> ChooseTheMinEnt(vector<vector<string>>cars,vector<string>featur
     return mkp(choose,MinEnt);
 }
 
-
 #endif // FUNC_H_INCLUDED
