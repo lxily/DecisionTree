@@ -25,7 +25,7 @@
         ①CheckInformationOfCars(cars)：统计数据集中有多少种不同的结果(标签)及对应数目，返回结果为所有的数据对  
         ②FeatureEqual(cars,feature)：判断当前数据集cars在属性feature上的值是否全部一样  
         ③CalculateEntD(cars)：计算当前数据集的信息熵  
-        ④CancleNumber(feature,cancle)：从属性集feature种删除属性cancle  
+        ④CancleNumber(feature,cancle)：从属性集feature中删除属性cancle  
         ⑤ChooseTheMinEnt(cars,feature)：计算将数据集car根据剩余属性分类的结果得到的信息熵的总和，返回一个最小值及对应的属性编号
  
  4. model.h：实现了决策树无剪枝、预剪枝、后剪枝三种情况下的建立：  
