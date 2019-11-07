@@ -2,13 +2,15 @@
 #define INIT_H_INCLUDED
 
 #include<bits/stdc++.h>
+#define pii pair<int,int>
 #define pis pair<int,string>
 #define mkp(a,b) make_pair(a,b)
+
+using namespace std;
+
 #define MaxLabel 4
 #define MaxFeature 6
 #define MaxSubFeature 10
-using namespace std;
-
 vector<vector<string>>allCar;
 vector<string>labels{"unacc", "acc", "good", "vgood"};
 vector<string>attribute{"buying", "maint", "doors", "persons", "lug_boot", "safety"};
@@ -21,28 +23,30 @@ vector<string>features[MaxFeature]{
     {"low","med","high"}
 };
 
-//#define MaxLabel 2
-//#define MaxFeature 6
-//#define MaxSubFeature 10
-//vector<vector<string>>allCar;
-//vector<string>labels{"ÊÇ", "·ñ"};
-//vector<string>attribute{"É«Ôó", "¸ùµÙ", "ÇÃÉù", "ÎÆÀí", "Æê²¿", "´¥¸Ğ"};
-//vector<string>features[MaxFeature]{
-//    {"ÇàÂÌ","ÎÚºÚ","Ç³°×"},
-//    {"òéËõ","ÉÔòé","Ó²Í¦"},
-//    {"×ÇÏì","Çå´à","³ÁÃÆ"},
-//    {"ÇåÎú","ÉÔºı","Ä£ºı"},
-//    {"°¼Ïİ","ÉÔ°¼","Æ½Ì¹"},
-//    {"Ó²»¬","ÈíÕ³"}
-//};
+    /*
+    #define MaxLabel 2
+    #define MaxFeature 6
+    #define MaxSubFeature 10
+    vector<vector<string>>allCar;
+    vector<string>labels{"ÊÇ", "·ñ"};
+    vector<string>attribute{"É«Ôó", "¸ùµÙ", "ÇÃÉù", "ÎÆÀí", "Æê²¿", "´¥¸Ğ"};
+    vector<string>features[MaxFeature]{
+        {"ÇàÂÌ","ÎÚºÚ","Ç³°×"},
+        {"òéËõ","ÉÔòé","Ó²Í¦"},
+        {"×ÇÏì","Çå´à","³ÁÃÆ"},
+        {"ÇåÎú","ÉÔºı","Ä£ºı"},
+        {"°¼Ïİ","ÉÔ°¼","Æ½Ì¹"},
+        {"Ó²»¬","ÈíÕ³"}
+    };
+    */
 
 /*
-    0¡¢buying:   v-high, high, med, low->0¡¢1¡¢2¡¢3
-    1¡¢maint:    v-high, high, med, low->0¡¢1¡¢2¡¢3
-    2¡¢doors:    2, 3, 4, 5-more       ->0¡¢1¡¢2¡¢3
-    3¡¢persons:  2, 4, more            ->0¡¢1¡¢2
-    4¡¢lug_boot: small, med, big       ->0¡¢1¡¢2
-    5¡¢safety:   low, med, high        ->0¡¢1¡¢2
+    0¡¢buying:   v-high, high, med, low  ->0¡¢1¡¢2¡¢3
+    1¡¢maint:    v-high, high, med, low  ->0¡¢1¡¢2¡¢3
+    2¡¢doors:    2, 3, 4, 5-more         ->0¡¢1¡¢2¡¢3
+    3¡¢persons:  2, 4, more              ->0¡¢1¡¢2
+    4¡¢lug_boot: small, med, big         ->0¡¢1¡¢2
+    5¡¢safety:   low, med, high          ->0¡¢1¡¢2
 */
 map<string,int>MapOfLabel;
 map<string,int>MapOfFeature;
