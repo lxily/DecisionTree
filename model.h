@@ -1,7 +1,8 @@
 #ifndef MODEL_H_INCLUDED
 #define MODEL_H_INCLUDED
 
-TreeNode* TreeGenerateWithoutPruning(vector<vector<string>>cars,vector<string>feature){
+TreeNode* TreeGenerateWithoutPruning(vector<vector<string>>cars,
+                                     vector<string>feature){
     /*没有训练集：正常输入下不可能出现该情况*/
     if(cars.size()==0){
         return nullptr;
@@ -59,7 +60,9 @@ TreeNode* TreeGenerateWithoutPruning(vector<vector<string>>cars,vector<string>fe
     return Node;
 }
 
-TreeNode* TreeGenerateWithPrepruning(vector<vector<string>>cars,vector<vector<string>>limit,vector<string>feature){
+TreeNode* TreeGenerateWithPrepruning(vector<vector<string>>cars,
+                                     vector<vector<string>>limit,
+                                     vector<string>feature){
     if(cars.size()==0){
         /*没有训练集：正常输入下不可能出现该情况*/
         return nullptr;
@@ -144,7 +147,9 @@ TreeNode* TreeGenerateWithPrepruning(vector<vector<string>>cars,vector<vector<st
     return Node;
 }
 
-TreeNode* TreeGenerateWithPostpruning(vector<vector<string>>cars,vector<vector<string>>limit,vector<string>feature){
+TreeNode* TreeGenerateWithPostpruning(vector<vector<string>>cars,
+                                      vector<vector<string>>limit,
+                                      vector<string>feature){
     if(cars.size()==0){
         /*没有训练集：正常输入下不可能出现该情况*/
         return nullptr;
@@ -246,6 +251,9 @@ TreeNode* TreeGenerateWithPostpruning(vector<vector<string>>cars,vector<vector<s
 
     return Node;
 }
+
+
+
 int TreeCaculateNodeCnt(TreeNode *Model){
     //叶子节点
     if(Model==nullptr){
