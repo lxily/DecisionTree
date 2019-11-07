@@ -34,6 +34,7 @@ bool FeatureEqual(vector<vector<string>>cars,vector<string>feature){
     }
     return true;
 }
+
 double CalculateEntD(vector<vector<string>>cars){
     double EntD=0,cnt[MaxLabel];
     for(int i=0;i<MaxLabel;i++)
@@ -47,6 +48,7 @@ double CalculateEntD(vector<vector<string>>cars){
     }
     return EntD;
 }
+
 vector<string> CancleNumber(vector<string>feature,string cancle){
     for(int i=0;i<(int)feature.size();i++){
         if(feature[i]==cancle){
